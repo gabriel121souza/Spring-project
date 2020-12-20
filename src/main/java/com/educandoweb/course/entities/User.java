@@ -29,7 +29,6 @@ public class User implements Serializable {
 	@JsonIgnore
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
-
 	
 	public User() {
 	}
@@ -82,11 +81,12 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
+
 	public List<Order> getOrders() {
 		return orders;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
